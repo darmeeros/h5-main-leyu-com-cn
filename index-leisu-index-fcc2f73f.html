@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>雷速 · 日常查询与对照</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: #f7f8fa;
+      color: #1e2a3a;
+      line-height: 1.7;
+    }
+
+    /* 深色头图 */
+    .hero {
+      background: #10161d;
+      color: #e8ecf1;
+      padding: 4rem 2rem 3.2rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 400;
+      letter-spacing: 1.5px;
+      margin-bottom: 0.8rem;
+    }
+
+    .hero h1 span {
+      font-weight: 600;
+      color: #f5c542;
+    }
+
+    .hero p {
+      max-width: 520px;
+      margin: 1rem auto 0;
+      font-size: 1.05rem;
+      color: #b4c0d0;
+      line-height: 1.6;
+    }
+
+    .hero .subnote {
+      margin-top: 1.2rem;
+      font-size: 0.9rem;
+      color: #7b8a9e;
+    }
+
+    /* 浅色正文区 */
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 2.4rem 1.8rem 4rem;
+    }
+
+    .section-title {
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: #1a2632;
+      border-left: 4px solid #d49c3d;
+      padding-left: 1rem;
+      margin: 2.8rem 0 1.2rem;
+    }
+
+    .section-title:first-of-type {
+      margin-top: 0.8rem;
+    }
+
+    .intro-text {
+      font-size: 1rem;
+      color: #2c3a4a;
+      margin-bottom: 1.6rem;
+    }
+
+    .intro-text a {
+      color: #b8862c;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid transparent;
+      transition: border 0.2s;
+    }
+
+    .intro-text a:hover {
+      border-bottom: 1px solid #b8862c;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin: 1.8rem 0 1.2rem;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 1.5rem 1.2rem 1.3rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      border: 1px solid #e6e9ee;
+      transition: box-shadow 0.2s;
+    }
+
+    .card:hover {
+      box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    }
+
+    .card h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #1e2a3a;
+      margin-bottom: 0.5rem;
+    }
+
+    .card h3 .accent {
+      color: #c99236;
+      font-weight: 500;
+    }
+
+    .card p {
+      font-size: 0.92rem;
+      color: #3b4b5e;
+      line-height: 1.6;
+    }
+
+    .highlight-box {
+      background: #f0f2f6;
+      padding: 1.5rem 1.8rem;
+      border-radius: 12px;
+      margin: 2rem 0;
+    }
+
+    .highlight-box p {
+      margin-bottom: 0.3rem;
+    }
+
+    .faq-item {
+      margin: 1.4rem 0;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid #e2e6ec;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-item strong {
+      display: block;
+      font-weight: 600;
+      color: #1e2a3a;
+      margin-bottom: 0.2rem;
+    }
+
+    .faq-item p {
+      font-size: 0.95rem;
+      color: #3c4d60;
+    }
+
+    .footer-note {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #7d8b9d;
+    }
+
+    .footer-note a {
+      color: #7d8b9d;
+      text-decoration: none;
+      border-bottom: 1px dotted #b0bccb;
+    }
+
+    .footer-note a:hover {
+      color: #b8862c;
+      border-bottom-color: #b8862c;
+    }
+
+    /* 响应式 */
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 2rem; }
+      .hero { padding: 3rem 1.2rem 2.5rem; }
+      .container { padding: 1.8rem 1.2rem 3rem; }
+      .card-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 深色头图 -->
+  <section class="hero">
+    <h1><span>雷速</span> · 日常查询与对照</h1>
+    <p>一个围绕信息检索与延伸阅读的轻量工具——在碎片时间里完成准确对照，不堆积冗余。</p>
+    <div class="subnote">适合需要快速比对、查阅背景、保持阅读节奏的人</div>
+  </section>
+
+  <!-- 浅色正文区 -->
+  <div class="container">
+
+    <!-- 摘要 / 切入 -->
+    <div class="intro-text">
+      很多时候，我们打开一个页面只是出于一次简单的<strong>核实</strong>：某个说法是否准确，一组数据是否对应，一段描述是否有另一种视角。<a href="https://index--leisu.com">雷速</a>的设计思路正是从这里开始——它不追求面面俱到的知识库，而是提供一个<strong>即查即览</strong>的界面，让你在查阅中自然完成对照，不必被导航条或弹窗打断。这种体验更像是在一张干净的桌上摊开几页材料，目光扫过即可得到答案。
+    </div>
+
+    <!-- 亮点卡片 -->
+    <h2 class="section-title">几个平常但有用的特点</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3><span class="accent">/</span> 条目式对照</h3>
+        <p>信息以短条目组织，左文右文并列或上下承接，对视力友好，也方便逐条确认。不必滚动长篇大论。</p>
+      </div>
+      <div class="card">
+        <h3><span class="accent">/</span> 延伸参考</h3>
+        <p>每个条目可能附带相关链接或注释，供你有选择地深入。但不强推，看完即走，符合日常浏览习惯。</p>
+      </div>
+      <div class="card">
+        <h3><span class="accent">/</span> 状态轻</h3>
+        <p>页面结构保持轻量化，没有繁复的菜单或二级页面。打开即用，关闭无负担，适合作为浏览器常驻标签页之一。</p>
+      </div>
+    </div>
+
+    <!-- 使用场景 + 建议 -->
+    <h2 class="section-title">使用场景与建议</h2>
+    <div class="highlight-box">
+      <p><strong>日常核对</strong> — 当你需要快速验证一条资讯里的时间、名称或数字时，不妨打开 <a href="https://index--leisu.com">雷速</a> 作为参照源。它的条目通常直接标明来源或语境，减少反复跳转。</p>
+      <p style="margin-top: 0.8rem;"><strong>对照阅读</strong> — 部分页面会并置不同角度的表述（如原文与译文、不同统计口径）。这种并排方式本身就在降低理解成本，尤其适合学术或兴趣类检索。</p>
+    </div>
+
+    <!-- 提示 / FAQ 摘要 -->
+    <h2 class="section-title">常见疑问与提示</h2>
+
+    <div class="faq-item">
+      <strong>页面内容和搜索引擎结果有什么区别？</strong>
+      <p>雷速上的条目经过筛选和结构化，通常比原始搜索结果更简洁、更聚焦。它不替代搜索，而是提供一种经过组织的参照框架。</p>
+    </div>
+
+    <div class="faq-item">
+      <strong>是否需要注册或登录？</strong>
+      <p>不需要。当前页面完全开放，没有账户体系或付费模块。直接使用即可，收藏或自由阅读。</p>
+    </div>
+
+    <div class="faq-item">
+      <strong>数据更新频率如何？</strong>
+      <p>视条目类型而定，常规参照类信息会保持季度或年度核对。如果你发现某个条目需要更新，可以留意页面上的反馈途径（如有）。</p>
+    </div>
+
+    <!-- 可信任但克制的访问说明 -->
+    <div class="intro-text" style="margin-top: 1.8rem;">
+      网站 <a href="https://index--leisu.com">雷速</a> 由个人维护，内容基于公开资料并经过交叉验证。它不构成专业建议，也不做商业承诺。你看到的每一条信息都可以点击溯源或自行核实。克制的背后是诚恳——我们提供辅助，而非答案。
+    </div>
+
+    <div class="footer-note">
+      <span>· 保持开放 · 理性对照 ·</span>
+    </div>
+
+  </div>
+
+</body>
+</html>
